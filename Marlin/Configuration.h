@@ -752,11 +752,11 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 2500, 2500, 100, 50 }
+#define DEFAULT_MAX_FEEDRATE          { 2000, 2000, 100, 50 }
 
 #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 5000, 5000, 200, 75 } // ...or, set your own edit limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 4000, 4000, 200, 75 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -1317,7 +1317,7 @@
 
   #define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 15              // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 6      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
@@ -1333,7 +1333,7 @@
   //=================================== Mesh ==================================
   //===========================================================================
 
-  #define MESH_INSET 10          // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 15          // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 6    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
